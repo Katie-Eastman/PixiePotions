@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Pixie Potions</title>
+	  <link rel="stylesheet" href="../CSS/styles.css">
+	  <script src="../JavaScript/script.js" defer></script>
+   </head>
+   <body class="content">
+      <header>
+         <h1>-Pixie Potions-</h1>
+         <nav>
+            <a href="index.html">Home</a> <br>
+			<a href="catalogue.html">Catalogue</a> <br>
+			<a href="testimonials.html">Testimonials</a> <br>
+			<a href="contact.html">Contact Us</a> <br>
+			<a href="faqs.html">FAQs</a>
+         </nav>
+      </header>
+      
+      <main>
+		<div>
+         <section>
+            <p>
+               <h2>Contact Us</h2>
+			   <form onsubmit="confirmSubmit()" method="post" action="">         
+            <p>
+               <label for="name">What is your name?</label>
+               <input type="text" id="name" name="name" required>
+            </p>
+			<p>
+               <label for="email">Email:</label>
+               <input type="email" id="email" name="email" required>
+            </p>
+            <p>
+               <label for="reason">Reason for Contact:</label>
+               <select id="reason" name="reason" required>
+                  <option value="">Choose one...</option>
+                  <option>Custom Order Request</option>
+                  <option>Question About Product</option>
+                  <option>Employment Inquiry</option>
+                  <option>Other</option>
+               </select>
+            </p>
+            <p>
+               <label for="details"></label>
+               <textarea id="details" name="details" placeholder="Details" rows="15" cols="80" required></textarea>
+            </p>
+            <button>Submit</button>
+				</form>
+            </p>
+         </section>
+		 </div>
+      </main>
+      
+      <footer>
+         <p>
+            Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
+         </p>
+      </footer>      
+      
+   </body>
+</html>
