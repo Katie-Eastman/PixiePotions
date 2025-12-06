@@ -12,6 +12,23 @@
 		margin-bottom: 30px;
 	}
 	
+.navigation
+	{
+		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+		color: white;
+		font-size: 1.4em;
+		background-color: black;
+		position: fixed;
+		top: 0;
+		left: 0;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 30px;
+		margin-left: 30px;
+		border: 3px solid #B37700;
+		padding: 30px;
+	}
+	
 .padding 
 	{
 		padding-left: 30px;
@@ -26,7 +43,18 @@
 	{
 		text-align: justify;
 	}
+	
+.pagenotfound
+	{
+		font-size: 20pt;
+	}
 
+.currentpage
+	{
+		border: 2px dotted #B37700;
+		padding: 2px;
+	}
+	
 header 
 	{
 		border: 3px solid #B37700;
@@ -73,8 +101,6 @@ a
 
 a:hover
 	{
-		font-weight: bold;
-		border: 2px dotted #B37700;
 		color: #B37700;
 	}
 
