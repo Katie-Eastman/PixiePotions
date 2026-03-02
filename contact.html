@@ -12,25 +12,26 @@
 			<a href="catalogue.html">Catalogue</a> <br>
 			<a href="testimonials.html">Testimonials</a> <br>
 			<a class="currentpage" href="contact.html">Contact Us</a> <br>
-			<a href="faqs.html">FAQs</a>
+			<a href="faqs.html">FAQs</a><br>
+			<button id="themeToggleButton">&#127769 / &#127774</button>
       </nav>
 	  <header>
          <h1>-Pixie Potions-</h1>
       </header>
       
       <main>
-		<div>
+		<div class="divbox">
          <section>
             <p>
                <h2>Contact Us</h2>
 			   <form onsubmit="confirmSubmit()" method="post" action="">         
             <p>
-               <label for="name">What is your name?</label>
-               <input type="text" id="name" name="name" required>
+               <label for="name">What is your full name?</label>
+               <input type="text" id="name" name="name" pattern="^[A-za-z\s]{2,50}$" required>
             </p>
 			<p>
                <label for="email">Email:</label>
-               <input type="email" id="email" name="email" required>
+               <input type="email" id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
             </p>
             <p>
                <label for="reason">Reason for Contact:</label>
@@ -44,9 +45,9 @@
             </p>
             <p>
                <label for="details"></label>
-               <textarea id="details" name="details" placeholder="Details" rows="15" cols="80" required></textarea>
+               <textarea id="details" name="details" placeholder="Details" rows="15" cols="80" pattern=".{10,1000}" required></textarea>
             </p>
-            <button>Submit</button>
+            <button id="submitButton">Submit</button>
 				</form>
             </p>
          </section>
@@ -61,3 +62,5 @@
       
    </body>
 </html>
+</html>
+
