@@ -1,9 +1,41 @@
+/* global custom variables */ 
+:root {
+  --main-color: #B37700;
+  --main-font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  
+  /* dark theme (default) */
+  --bg-color: black;
+  --text-color: white;
+  --link-color: white;
+}
+
+body.lighttheme
+	{
+		--bg-color: white;
+		--text-color: black;
+		--link-color: black;
+	}
+
+body 
+	{
+		background-color: var(--bg-color);
+		color: var(--text-color);
+		font-family: var(--main-font-family);
+	}
+
+#themeToggleButton
+	{
+		margin: 10px;
+		padding: 10px;
+		border: 2px solid var(--main-color);
+		color: var(--text-color);
+		background-color: var(--bg-color);
+		cursor: pointer;
+	}
+	
 .content
 	{
-		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-		color: white;
 		font-size: 1.25em;
-		background-color: black;
 		margin: auto;
 		display: block;
 		width: 50%;
@@ -14,10 +46,10 @@
 	
 .navigation
 	{
-		font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-		color: white;
+		font-family: var(--main-font-family);
+		color: var(--text-color);
 		font-size: 1.4em;
-		background-color: black;
+		background-color: var(--bg-color);
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -25,8 +57,19 @@
 		margin-top: 30px;
 		margin-bottom: 30px;
 		margin-left: 30px;
-		border: 3px solid #B37700;
+		border: 3px solid var(--main-color);
 		padding: 30px;
+	}
+	
+a
+	{
+		color: var(--link-color);
+		text-decoration: none;
+	}
+
+a:hover
+	{
+		color: var(--main-color);
 	}
 	
 .padding 
@@ -35,7 +78,7 @@
 		padding-right: 30px;
 		padding-top: 15px;
 		padding-bottom: 15px;
-		border: 3px dotted #B37700;
+		border: 3px dotted var(--main-color);
 		border-radius: 10px;
 	}
 
@@ -51,13 +94,12 @@
 
 .currentpage
 	{
-		border: 2px dotted #B37700;
-		padding: 2px;
+		color: var(--main-color);
 	}
 	
 header 
 	{
-		border: 3px solid #B37700;
+		border: 3px solid var(--main-color);
 		border-top-left-radius: 15px;
 		border-top-right-radius: 15px;
 		width: 40%;
@@ -70,7 +112,7 @@ header
 	
 h1, h2, h3, strong
 	{
-		text-shadow: 0px 4px 4px #B97B00;
+		text-shadow: 0px 4px 4px var(--main-color);
 	}
 	
 h2
@@ -84,24 +126,13 @@ footer
 		color: gray;
 	}
 
-div
+.divbox
 	{
-		border: 5px solid #B37700;
+		border: 5px solid var(--main-color);
 		border-radius: 200px 200px 50px 50px;
 		padding-left: 20px;
 		padding-right: 20px;
-		box-shadow: 0px 0px 15px 5px rgba(185,123,0,0.8);
-	}
-
-a
-	{
-		color: white;
-		text-decoration: none;
-	}
-
-a:hover
-	{
-		color: #B37700;
+		box-shadow: 0px 0px 15px 5px var(--main-color);
 	}
 
 strong
@@ -112,12 +143,12 @@ strong
 	
 img
 	{
-		border: 5px solid #B37700;
+		border: 5px solid var(--main-color);
 	}
 
 form 
 	{
-		border: 3px dotted #B37700;
+		border: 3px dotted var(--main-color);
 		border-radius: 30px;
 		margin: 40px;
 		padding: 20px;
@@ -127,16 +158,16 @@ input, select, textarea, button
 	{
 		padding: 10px;
 		margin: 10px;
-		border: 3px solid #B37700;
+		border: 3px solid var(--main-color);
 		border-radius: 10px;
 	}
 	
 input:focus, select:focus, textarea:focus, button:hover
 	{
-		box-shadow: 0px 0px 15px 5px rgba(185,123,0,0.8);
+		box-shadow: 0px 0px 15px 5px var(--main-color);
 	}
 	
-button 
+#submitButton 
 	{
 		width: 30%;
 		padding: 20px;
