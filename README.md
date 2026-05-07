@@ -23,5 +23,6 @@ The only things that folks seem to know for certain are as follows:
 - **FAQ's:** This page outlines and answers the most frequently asked questions that Pixie Potions gets from the public and its customers.
 - **404:** In addition to the standard front-facing pages for the site, there is also a custom 404 'page not found' page that includes a link back to the homepage.
 
-### Disclaimer: 
+### Disclaimers: 
 - The development of the most recent iteration of this site was done with the occasional assistance of GenAI tools.
+- This project is hooked up to use JQuery, however no JQuery has been implemented yet.
