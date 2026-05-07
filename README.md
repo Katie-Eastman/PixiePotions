@@ -23,16 +23,5 @@ The only things that folks seem to know for certain are as follows:
 - **FAQ's:** This page outlines and answers the most frequently asked questions that Pixie Potions gets from the public and its customers.
 - **404:** In addition to the standard front-facing pages for the site, there is also a custom 404 'page not found' page that includes a link back to the homepage.
 
-## JavaScript:
-This site uses one instance of a JavaScript feature at the moment. 
-When a visitor to the site fills out and submits a query using the form on the 'Contact Us' page, an alert will pop up that tells the user that their response has been successfully sent.
-
-## Known Issues To Fix:
-- This site looks and functions the best on a desktop computer. It was developed using a 1080p monitor, and while many of the elements of the page are adaptible to mobile devices, not all of them are...the images especially.
-- The navigation box in the top left corner slightly changes size when the user is going to and from the 'Testimonials' page. Not the end of the world, but ideally the box should remain consistent in its sizing.
-- I think that it would be ideal to look further into accessibility concerns regarding the site.
-
-## Other Future Improvements:
-- While I personally love and prefer 'dark mode' sites, some people may struggle to read the site as-is due to its high-contrast colors. I think it would be very neat to include a toggle to switch between a light and dark site.
-- I wasn't able to get around to making custom art/graphics for the site, or a logo, however with more time this is something that I would like to do.
-- The assignment for this project was a 'professional' business website...however, I think that it would be very neat and fun to add some ARG elements to the site in order to flesh out the mystery and story of the business more.
+### Disclaimer: 
+- The development of the most recent iteration of this site was done with the occasional assistance of GenAI tools.
