@@ -1,66 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Pixie Potions</title>
-	  <link rel="stylesheet" href="CSS/styles.css">
-	  <script src="JavaScript/script.js" defer></script>
-   </head>
-   <body class="content">
-      <nav class="navigation">
-            <a href="index.html">Home</a> <br>
-			<a href="catalogue.html">Catalogue</a> <br>
-			<a href="testimonials.html">Testimonials</a> <br>
-			<a class="currentpage" href="contact.html">Contact Us</a> <br>
-			<a href="faqs.html">FAQs</a><br>
-			<button id="themeToggleButton">&#127769 / &#127774</button>
-      </nav>
-	  <header>
-         <h1>-Pixie Potions-</h1>
-      </header>
-      
-      <main>
-		<div class="divbox">
-         <section>
-            <p>
-               <h2>Contact Us</h2>
-			   <form onsubmit="confirmSubmit()" method="post" action="">         
-            <p>
-               <label for="name">What is your full name?</label>
-               <input type="text" id="name" name="name" pattern="^[A-za-z\s]{2,50}$" required>
-            </p>
-			<p>
-               <label for="email">Email:</label>
-               <input type="email" id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
-            </p>
-            <p>
-               <label for="reason">Reason for Contact:</label>
-               <select id="reason" name="reason" required>
-                  <option value="">Choose one...</option>
-                  <option>Custom Order Request</option>
-                  <option>Question About Product</option>
-                  <option>Employment Inquiry</option>
-                  <option>Other</option>
-               </select>
-            </p>
-            <p>
-               <label for="details"></label>
-               <textarea id="details" name="details" placeholder="Details" rows="15" cols="80" pattern=".{10,1000}" required></textarea>
-            </p>
-            <button id="submitButton">Submit</button>
-				</form>
-            </p>
-         </section>
-		 </div>
-      </main>
-      
-      <footer>
-         <p>
-            Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
-         </p>
-      </footer>      
-      
-   </body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pixie Potions</title>
+        <link rel="icon" type="image/x-icon" href="images/potion-icon.png">
+
+        <script>
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("lightTheme");
+            }
+        </script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="JavaScript/script.js" defer></script>
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        
+        <nav class="navbar navbar-expand-lg border border-2 border-primary">
+            <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Pixie Potions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="catalogue.html">Catalogue</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="testimonials.html">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="faqs.html">FAQs</a>
+                  </li>
+               </ul>
+               <button id="themeToggleButton" class="btn ms-3">&#127769 / &#127774</button>
+            </div>
+         </div>
+        </nav>
+
+        <main class="container">
+
+            <div class="row justify-content-center mt-5 mb-5">
+                <div class="col-md-6 custom p-5 border border-primary rounded border-5 text-center">
+                    <form onsubmit="confirmSubmit()" method="post" action="">
+                        <h3 class="mb-4">Contact Us Here</h3>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">What is your full name?</label>
+                            <input type="text" class="form-control" id="name" name="name" pattern="^[A-za-z\s]{2,50}$" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reason" class="form-label">Reason for Contact:</label>
+                                <select class="form-select" id="reason" name="reason" required>
+                                    <option value="">Choose one...</option>
+                                    <option>Custom Order Request</option>
+                                    <option>Question About Product</option>
+                                    <option>Employment Inquiry</option>
+                                    <option>Other</option>
+                                </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="details" class="form-label">Details</label>
+                            <textarea class="form-control" id="details" name="details" rows="5" pattern=".{10,1000}" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mt-auto custom text-center py-2 w-100">
+
+            <div>
+                <p class="mb-0">
+                    Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
+                </p>
+            </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
 </html>
 
