@@ -1,51 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Pixie Potions</title>
-	  <link rel="stylesheet" href="CSS/styles.css">
-	  <script src="JavaScript/script.js" defer></script>
-   </head>
-   <body class="content">
-      <nav class="navigation">
-           <a class="currentpage" href="index.html">Home</a> <br>
-			<a href="catalogue.html">Catalogue</a> <br>
-			<a href="testimonials.html">Testimonials</a> <br>
-			<a href="contact.html">Contact Us</a> <br>
-			<a href="faqs.html">FAQs</a><br>
-			<button id="themeToggleButton">&#127769 / &#127774</button>
-      </nav>
-	  <header>
-         <h1>-Pixie Potions-</h1>
-      </header>
-      
-      <main>
-		<div class="divbox">
-         <section>
-			<h2>About Us</h2>
-            <p>
-               <img src="images/potion_stockimage.jpg" alt="three colorful potions in glass bottles" width="650">
-			   <!--- image sourced from pexels.com. would like to replace with og art if time allows ---!>
-            </p>
-            <p class="padding justify">
-			   Here at Pixie Potions, we specialize in providing our customers with personalized solutions to whatever ails them. 
-			   Whether you be afflicted with the winter chill, need to ditch a tricky generational curse, or long to breath underwater with your selkie friend, we've got you covered.
-			   <br> <br>
-               Founded 3 generations ago, our small family business considers it our honor to serve our community. Apothecaries by trade, we take great care to ensure the quality of our potions. 
-			   For directions to our shop: close your eyes, spin counter-clockwise three times in place, and speak your name aloud. From there, follow the sound of bells. You will find your way. 
-			   We look forward to meeting with you soon~
-            </p>
-         </section>
-		 </div>
-      </main>
-      
-      <footer>
-         <p>
-            Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
-         </p>
-      </footer>      
-        
-   </body>
-</html>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pixie Potions</title>
+        <link rel="icon" type="image/x-icon" href="images/potion-icon.png">
 
+        <script>
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("lightTheme");
+            }
+        </script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="CSS/styles.css" rel="stylesheet" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="JavaScript/script.js" defer></script>
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        
+        <nav class="navbar navbar-expand-lg border border-2 border-primary">
+            <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Pixie Potions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                     <a class="nav-link active" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="catalogue.html">Catalogue</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="testimonials.html">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="faqs.html">FAQs</a>
+                  </li>
+               </ul>
+               <button id="themeToggleButton" class="btn ms-3">&#127769 / &#127774</button>
+            </div>
+         </div>
+        </nav>
+
+        <main class="container mt-5 flex-grow-1">
+
+            <div class="border border-primary border-5 rounded text-justify p-5 custom mb-5">
+                <h2 class="text-center mb-3">About Us</h2>
+                <p>
+                    Here at Pixie Potions, we specialize in providing our customers with personalized solutions to whatever ails them. 
+                    Whether you be afflicted with the winter chill, need to ditch a tricky generational curse, or long to breath underwater with your selkie friend, we've got you covered.
+                </p>
+                <p class="mb-3">
+                    Founded 3 generations ago, our small family business considers it our honor to serve our community. Apothecaries by trade, we take great care to ensure the quality of our potions. 
+                    For directions to our shop: close your eyes, spin counter-clockwise three times in place, and speak your name aloud. From there, follow the sound of bells. You will find your way. 
+                    We look forward to meeting with you soon~
+                </p>
+                <p>
+                    <img src="images/potion-making-1.jpg" alt="a professional apothecary holding 2 potions over a small cauldron" class="img-fluid rounded border-3 border-primary border">
+                </p>
+            </div>
+
+        </main>
+
+        <footer class="mt-auto custom text-center py-2 w-100">
+
+            <div>
+                <p class="mb-0">
+                    Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
+                </p>
+            </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
+</html>
