@@ -1,69 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Pixie Potions</title>
-	  <link rel="stylesheet" href="CSS/styles.css">
-	  <script src="JavaScript/script.js" defer></script>
-   </head>
-   <body class="content">
-      <nav class="navigation">
-            <a href="index.html">Home</a> <br>
-			<a href="catalogue.html">Catalogue</a> <br>
-			<a href="testimonials.html">Testimonials</a> <br>
-			<a href="contact.html">Contact Us</a> <br>
-			<a class="currentpage" href="faqs.html">FAQs</a><br>
-			<button id="themeToggleButton">&#127769 / &#127774</button>
-      </nav>
-	  <header>
-         <h1>-Pixie Potions-</h1>
-      </header>
-      
-      <main>
-		<div class="divbox">
-			<section>
-				<h2> Frequently Asked Questions </h2>
-					<br>
-					<p class="justify"> 
-						<strong>Where is the storefront located?</strong>
-						<br>
-						The precise location of our storefront is intentionally left ambiguous for security purposes. However, our shop is charmed in such a way that if you follow these instructions,
-						you will be able to find your way to our store: close your eyes, spin counter-clockwise precisely three times in place, and confidently speak your name aloud. 
-					</p>
-					<p class="padding justify">
-						<strong>How much does each potion cost?</strong>
-						<br>
-						The pricing for our potions is determined on a case-by-case basis. The availability and cost of the ingredients needed to make each elixir, as well as the concentration of active ingredients 
-						needed for each individual customer, varies wildly. This unfortunately means that we cannot give definitive pricing for our products. However, our friendly staff are more than happy to accomodate
-						the differing needs and financial capabilities of every one of our customers. We can assure you that the cost of our potions has never been an issue before, nor should it be in the future!
-					</p>
-					<p class="justify"> 
-						<strong>Does (xyz) potion have any side effects?</strong>
-						<br>
-						As every one of our potions is magical, and magic can be unpredictable by nature, we cannot 100% guarantee that none of our potions will have any side effects. However, our customers have yet
-						to experience and side effect more serious than temporary and minor blurry vision. Our apothecaries are highly trained and prepared to deal with any unwanted side effects that you may encounter,
-						however rare and unlikely an occurence side effects may be. 
-					</p>
-					<p class="padding justify">
-						<strong>Do you sell other magical artifacts?</strong>
-						<br>
-						We do not! Sorry to disappoint. But, since we are such a highly specialized business, we can focus entirely on providing our community with the highest quality of potions possible. 
-					</p>
-					<p class="justify"> 
-						<strong>What is your refund policy if a potion doesn't work for me?</strong>
-						<br>
-						Because each of our potions are made to suit each customer on an individual level, the likelihood of one not working is very slim. However, were this to happen, we would be compelled to 
-						fulfill our promise and make it up to the customer personally. We desire nothing more than for everybody who enters our shop to have the best experience possible.
-					</p>
-			</section>
-		</div>
-      </main>
-      
-      <footer>
-         <p>
-            Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
-         </p>
-      </footer>      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pixie Potions</title>
+        <link rel="icon" type="image/x-icon" href="images/potion-icon.png">
+
+        <script>
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.body.classList.add("lightTheme");
+            }
+        </script>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="JavaScript/script.js" defer></script>
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
         
-   </body>
+        <nav class="navbar navbar-expand-lg border border-2 border-primary">
+            <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">Pixie Potions</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav me-auto">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="catalogue.html">Catalogue</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="testimonials.html">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link active" href="faqs.html">FAQs</a>
+                  </li>
+               </ul>
+               <button id="themeToggleButton" class="btn ms-3">&#127769 / &#127774</button>
+            </div>
+         </div>
+        </nav>
+
+        <main class="container">
+
+            <div class="text-center mt-5">
+                <div class="custom d-inline-block p-4 rounded">
+                    <h4 class="mb-2">Answers to our customers' most frequently asked questions:</h4>
+                </div>
+            </div>
+
+            <div class="accordion mt-5" id="faqAccordion">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Where is the storefront located?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-justify">
+                        The precise location of our storefront is intentionally left ambiguous for security purposes. However, our shop is charmed in such a way that if you follow these instructions,
+                        you will be able to find your way to our store: close your eyes, spin counter-clockwise precisely three times in place, and confidently speak your name aloud.
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How much does each potion cost?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-justify">
+                        The pricing for our potions is determined on a case-by-case basis. The availability and cost of the ingredients needed to make each elixir, as well as the concentration of active ingredients 
+                        needed for each individual customer, varies wildly. This unfortunately means that we cannot give definitive pricing for our products. However, our friendly staff are more than happy to accomodate
+                        the differing needs and financial capabilities of every one of our customers. We can assure you that the cost of our potions has never been an issue before, nor should it be in the future!
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Does (xyz) potion have any side effects?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-justify">
+                        As every one of our potions is magical, and magic can be unpredictable by nature, we cannot 100% guarantee that none of our potions will have any side effects. However, our customers have yet
+                        to experience and side effect more serious than temporary and minor blurry vision. Our apothecaries are highly trained and prepared to deal with any unwanted side effects that you may encounter,
+                        however rare and unlikely an occurence side effects may be.
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do you sell other magical artifacts?
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-justify">
+                        We do not! Sorry to disappoint. But, since we are such a highly specialized business, we can focus entirely on providing our community with the highest quality of potions possible.
+                    </div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What is your refund policy if a potion doesn't work for me?
+                    </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body text-justify">
+                        Because each of our potions are made to suit each customer on an individual level, the likelihood of one not working is very slim. However, were this to happen, we would be compelled to 
+                        fulfill our promise and make it up to the customer personally. We desire nothing more than for everybody who enters our shop to have the best experience possible.
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <div class="mt-5 mb-5">
+                <img src="images/potion-writing.jpg" class="img-fluid border border-primary rounded border-5" alt="an apothecary writing in their grimoire">
+            </div>
+
+        </main>
+
+        <footer class="mt-auto custom text-center py-2 w-100">
+
+            <div>
+                <p class="mb-0">
+                    Pixie Potions is not liable for any unexpected outcomes experienced by customers. Our products are magical by nature--drink at your own risk.
+                </p>
+            </div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    
 </html>
